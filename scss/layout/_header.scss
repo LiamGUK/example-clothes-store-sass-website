@@ -1,0 +1,14 @@
+.header {
+  // Setting grid column to start in first column and to take up all remaining columns with -1 value.
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  // Secondary grid to build layout of header items inside header element.
+  display: grid;
+  grid-template-columns:
+    minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem))
+    minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 2rem;
+  z-index: 100;
+}
